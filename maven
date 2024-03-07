@@ -1,0 +1,28 @@
+ sudo yum install java-1.8.0-openjdk-devel -y
+    2  java -version
+    3  cd/opt/
+    4  cd /opt/
+    5  pwd
+    6  wget https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.zip
+    7  ls -ltr
+    8  unzip apache-maven-3.8.8-bin.zip
+    9  ls -ltr
+   10  mv apache-maven-3.8.8 maven
+   11  ls -ltr
+   12  cd maven/
+   13  ls -ltr
+   14  cd /etc/profile.d/
+   15  vim maven.sh
+   16  ls -ltr
+   17  chmod 777 maven.sh
+   18  ls -ltr
+   19  maven --version
+   20  maven -version
+   21  source maven.sh
+   22  mvn --version
+   23  mvn archetype:generate -DgroupId=com.example -DartifactId=my-java-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+   24  cd my-java-project/
+   25  ls -ltr
+   26  cat src/main/java/com/example/App.java
+   27  mvn clean package
+   28  java -cp target/my-java-project-1.0-SNAPSHOT.jar com.example.App
